@@ -39,7 +39,6 @@ body {
 
 #div0 {
   flex-flow: column;
-  z-index: 0;
   opacity: 0;
 }
 
@@ -65,15 +64,29 @@ body {
 #div1 {
   display: flex;
   flex-flow: column;
-  z-index: 1;
   align-self: flex-start;
   height: 300vh;
+}
+
+#addon {
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#addon-text {
+  font-style: bold;
+  font-size: 3em;
+  text-align: center;
+
+  animation: addon-fadein 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
 }
 
 #div2 {
   display: flex;
   flex-flow: row;
-  z-index: 2;
 }
 
 .subplace {
@@ -184,7 +197,6 @@ body {
   background-position: center;
   background-size: cover;
   flex-flow: row;
-  z-index: 3;
 
   animation: donatebg-fadein 1s linear infinite;
   animation-play-state: paused;
@@ -206,7 +218,6 @@ body {
   background: url("assets/meme.png"), #FFF;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 4;
 
   animation: meme-fadein 1s linear infinite;
   animation-play-state: paused;
@@ -222,12 +233,8 @@ body {
     opacity: 1;
   }
 
-  5% {
+  3%, 14% {
     transform: translate(0, -20%);
-    opacity: 0;
-  }
-
-  20% {
     opacity: 0;
   }
 }
@@ -237,7 +244,7 @@ body {
     background-color: #00000088;
   }
 
-  50% {
+  10%, 50% {
     background-color: #000000;
   }
 
@@ -247,89 +254,101 @@ body {
 }
 
 @keyframes g3-fadein {
-  0%, 10% {
+  0%, 8% {
     opacity: 0;
   }
 
-  16% {
+  14% {
     opacity: 1;
   }
 }
 
 @keyframes g2-fadein {
-  0%, 26% {
+  0%, 23% {
     opacity: 0;
   }
 
-  32% {
+  28% {
     opacity: 1;
   }
 }
 
 @keyframes g1-fadein {
-  0%, 43% {
+  0%, 37% {
     opacity: 0;
   }
 
-  50% {
+  42% {
     opacity: 1;
+  }
+}
+
+@keyframes addon-fadein {
+  0%, 52% {
+    transform: translate(0, 50%);
+    opacity: 0;
+  }
+
+  57%, 60% {
+    transform: translate(0%);
+    opacity: 1;
+  }
+
+  63%, 72% {
+    transform: translate(0, -50%);
+    opacity: 0;
   }
 }
 
 @keyframes best-fadein {
-  50% {
+  0%, 65% {
+    transform: translate(0, 50%);
     opacity: 0;
   }
 
-  60% {
-    transform: translate(0, 20%);
-    opacity: 0;
-  }
-
-  65% {
-    transform: translate(0%);
+  68% {
     opacity: 1;
+  }
+
+  71.28% {
+    transform: translate(0%);
   }
 }
 
 @keyframes bestbg-fadein {
-  50% {
+  57.14% {
     background-color: #000;
   }
 
-  60% {
+  72% {
     background-color: #00000080;
   }
 }
 
 @keyframes donate-fadein {
-  66.67% {
-    opacity: 0;
-  }
-
-  75% {
+  71.43%, 75% {
     transform: translate(0, 20%);
     opacity: 0;
   }
 
-  80% {
+  82% {
     transform: translate(0%);
     opacity: 1;
   }
 }
 
 @keyframes donatebg-fadein {
-  66.67% {
+  71.43% {
     background-position: center top;
   }
 
-  83.33% {
+  85.71% {
     background-position: center;
   }
 }
 
 @keyframes meme-fadein {
-  83.33% {
+  85.71% {
     opacity: 0;
     background-position: center top;
   }
