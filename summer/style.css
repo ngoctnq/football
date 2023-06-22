@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@100;700&display=swap');
+
+body {
+  margin: 0;
+  border: 0;
+  font-family: 'Pathway Extreme', sans-serif;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  color: white;
+  height: 100%;
+}
+
+.jumbo {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #000000BB;
+  background-blend-mode: multiply;
+}
+
+#block {
+  background-image: url('assets/main.jpg');
+  background-color: #00000088;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+
+  animation: introbg-fadeout 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+.title {
+  font-style: bold;
+  font-size: 5em;
+  text-align: center;
+}
+
+#div0 {
+  flex-flow: column;
+  z-index: 0;
+  opacity: 0;
+}
+
+#top-1, #sub-1 {
+  animation: intro-fadeout 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+#top-1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sub-1 {
+  text-align: center;
+  margin: 0.5em;
+}
+
+#div1 {
+  display: flex;
+  flex-flow: column;
+  z-index: 1;
+  align-self: flex-start;
+  height: 300vh;
+}
+
+#div2 {
+  display: flex;
+  flex-flow: row;
+  z-index: 2;
+}
+
+.subplace {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.gap {
+  width: 70%;
+}
+
+.place {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 2em;
+  background-blend-mode: multiply;
+}
+
+#p1, #p2, #p3 {
+  background-position: center;
+  background-size: cover;
+  text-shadow:1px 1px 10px #FFFFFF20, 1px 1px 10px #CCCCCC20;
+  height: 100vh;
+}
+
+#p2 {
+  background-image: url('assets/youngwarriors.jpg');
+  width: 30%;
+  color: #D7D7D7;
+  background-color: #000000D0;
+}
+
+#p1 {
+  background-image: url('assets/oldwolves.jpg');
+  width: 40%;
+  color: #C9B037;
+  background-color: #00000080;
+}
+
+#p3 {
+  background-image: url('assets/resident.jpg');
+  width: 30%;
+  color: #AD8A56;
+  background-color: #000000D0;
+}
+
+#g3 {
+  animation: g3-fadein 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+#g2 {
+  animation: g2-fadein 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+#g1 {
+  animation: g1-fadein 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+#q1, #q2, #q3 {
+  background-position: center;
+  background-size: cover;
+  text-shadow:1px 1px 10px #FFFFFF20, 1px 1px 10px #CCCCCC20;
+
+  animation: bestbg-fadein 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+#q2 {
+  background-image: url('assets/aTon.jpg');
+  width: 30%;
+}
+
+#q1 {
+  background-image: url('assets/aHoai.jpg');
+  width: 40%;
+}
+
+#q3 {
+  background-image: url('assets/viet.jpg');
+  width: 30%;
+}
+
+.giai {
+  animation: best-fadein 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+#div-1 {
+  background-image: url('assets/all.jpg');
+  background-color: #000000E0;
+  background-position: center;
+  background-size: cover;
+  flex-flow: row;
+  z-index: 3;
+
+  animation: donatebg-fadein 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+.content-1 {
+  display: flex;
+  align-items: center;
+  margin: 3em 8%;
+  font-size: 1.5em;
+
+  animation: donate-fadein 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+#meme {
+  background: url("assets/meme.png"), #FFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 4;
+
+  animation: meme-fadein 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+
+  opacity: 1;
+  
+  background-blend-mode: multiply;
+}
+
+@keyframes intro-fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  5% {
+    transform: translate(0, -20%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+}
+
+@keyframes introbg-fadeout {
+  0% {
+    background-color: #00000088;
+  }
+
+  50% {
+    background-color: #000000;
+  }
+
+  100% {
+    background-image: none;
+  }
+}
+
+@keyframes g3-fadein {
+  0%, 10% {
+    opacity: 0;
+  }
+
+  16% {
+    opacity: 1;
+  }
+}
+
+@keyframes g2-fadein {
+  0%, 26% {
+    opacity: 0;
+  }
+
+  32% {
+    opacity: 1;
+  }
+}
+
+@keyframes g1-fadein {
+  0%, 43% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes best-fadein {
+  50% {
+    opacity: 0;
+  }
+
+  60% {
+    transform: translate(0, 20%);
+    opacity: 0;
+  }
+
+  65% {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes bestbg-fadein {
+  50% {
+    background-color: #000;
+  }
+
+  60% {
+    background-color: #00000080;
+  }
+}
+
+@keyframes donate-fadein {
+  66.67% {
+    opacity: 0;
+  }
+
+  75% {
+    transform: translate(0, 20%);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes donatebg-fadein {
+  66.67% {
+    background-position: center top;
+  }
+
+  83.33% {
+    background-position: center;
+  }
+}
+
+@keyframes meme-fadein {
+  83.33% {
+    opacity: 0;
+    background-position: center top;
+  }
+
+  100% {
+    opacity: 1;
+    background-position: center;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
