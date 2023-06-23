@@ -217,6 +217,8 @@ body {
 #meme {
   background: url("assets/meme.png"), #FFF;
   background-position: center;
+  /* background-size: cover; */
+  background-size: 80% auto;
   background-repeat: no-repeat;
 
   animation: meme-fadein 1s linear infinite;
@@ -289,12 +291,12 @@ body {
     opacity: 0;
   }
 
-  57%, 60% {
+  57%, 58% {
     transform: translate(0%);
     opacity: 1;
   }
 
-  63%, 72% {
+  62%, 72% {
     transform: translate(0, -50%);
     opacity: 0;
   }
